@@ -1,0 +1,24 @@
+{
+  "name": "gilded_rose",
+  "version": "1.0.0",
+  "description": "A booking api",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "init-db": "rm persistence/inn.sqlite; node persistence/init-db.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaredhm/gilded_rose.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaredhm/gilded_rose/issues"
+  },
+  "homepage": "https://github.com/jaredhm/gilded_rose#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "sqlite3": "^3.1.13"
+  }
+}
