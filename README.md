@@ -2,7 +2,7 @@
 
 # Setup
 ### System Requirements
- - nodejs is installed (I said >=8.0 because that's what I've developed on, though I'm sure an earlier version will cut it
+ - nodejs is installed (I said >=8.0 because that's what I've developed on, though I'm sure an earlier version will cut it)
  - Probably any OS with a terminal and POSIX-compliant shell
 
 ### Startup
@@ -16,6 +16,10 @@ This ought to install all the required dependencies locally and then run the app
 ``` 
 Booking app listening on port 3000!
 ```
+
+# A high-level overview
+This application presents an API which allows guests to get and secure bookings at an inn. Queries to the `/bookings` routes take guest and storage constraints. A greedy booking algorithm is used to assign beds at the inn to guests based on how many pieces of luggage each guest holds and how many shared luggage slots are available in each of the rooms.
+The entirety of the inn is modeled using native NodeJS objects stored in-memory. There are objects for representing rooms, beds, luggage slots, guests, the booking schedule, etc.
 
 # Using the API
 ### Querying for a booking
