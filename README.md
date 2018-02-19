@@ -156,10 +156,10 @@ I'd estimate that I've spent 8 to 10 hours altogether on this project so far.
 
 Had I more time, there are several things that I'd like to see finished:
  - Scheduling and cleaning functionality actually implemented. Unfortunately, due to time constraints, I didn't get around to meeting this requirement
- - Better documentation. This would mean a number of things.
+ - Better documentation. This would mean a number of things:
 
-Had I the time, I would first implement the API using (swagger)[https://swagger.io/docs/specification/about/] so that I could properly specify the inputs and outputs of the API schema and use it to generate documentation, skeleton code, and API-level test templates.
-Additionally, like to see something like (JSDoc)[http://usejsdoc.org/] used for all function headers. This would allow me to generate documentation in all sorts of pretty formats.
+   - Had I the time, I would first implement the API using (swagger)[https://swagger.io/docs/specification/about/] so that I could properly specify the inputs and outputs of the API schema and use it to generate documentation, skeleton code, and API-level test templates.
+   - Additionally, like to see something like (JSDoc)[http://usejsdoc.org/] used for all function headers. This would allow me to generate documentation in all sorts of pretty formats.
   - Automated tests. There's a section about this below. I just think testing is super important, and I didn't get to do it.
 
 # Testing
