@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "node lib/test.js",
-    "init-db": "rm persistence/inn.sqlite; node persistence/init-db.js"
+    "test": "node lib/test.js"
   },
   "repository": {
     "type": "git",
