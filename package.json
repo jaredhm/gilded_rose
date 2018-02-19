@@ -19,6 +19,7 @@
   "homepage": "https://github.com/jaredhm/gilded_rose#readme",
   "dependencies": {
     "express": "^4.16.2",
-    "sqlite3": "^3.1.13"
+    "sqlite3": "^3.1.13",
+    "underscore": "^1.8.3"
   }
 }
