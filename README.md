@@ -151,7 +151,15 @@ curl -XGET -w '\nCode:%{http_code}' localhost:3000/schedule
 Code: 200
 ```
 
-# Third party tools/frameworks used
+# Online resources used:
+ - [The moment docs](http://momentjs.com/docs) - For interracting with the moment APIs
+ - [The express docs](https://expressjs.com/en/4x/api.html) - For standing up routes, and interracting with request/response objects
+ - [The priorityqueuejs docs](https://www.npmjs.com/package/priorityqueuejs) - For using the implementation of the priority queue library I used
+ - [The Mozilla JS docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference) - For all things node. E.g. syntax stuff, standard runtime libraries, etc.
+ - StackOverflow, to troubleshoot a medley of problems. Documenting them all here would be overkill, as much of the documentation for various idioms used is embedded within the code
+ - The project spec, of course
+
+# Third party tools/frameworks used:
 I kept dependencies to a minimum, I think. All that's needed is:
  - express - provides a nice, easy way to create a node API fast
 
