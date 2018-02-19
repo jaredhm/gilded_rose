@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "test": "node lib/test.js",
     "init-db": "rm persistence/inn.sqlite; node persistence/init-db.js"
   },
   "repository": {
@@ -19,6 +20,7 @@
   "homepage": "https://github.com/jaredhm/gilded_rose#readme",
   "dependencies": {
     "express": "^4.16.2",
+    "priorityqueuejs": "^1.0.0",
     "sqlite3": "^3.1.13",
     "underscore": "^1.8.3"
   }
