@@ -72,7 +72,7 @@ When the client wishes to make a booking for a set of luggage and guest constrai
 ```
 POST /booking/guests/:numGuest/luggage/:storageNeeded
 ```
-Again, where both `numGuests` and `storageNeeded` are integers. An example query:
+Again, both `numGuests` and `storageNeeded` are integers here. An example query:
 ```
 curl -XPOST -w '\nCode: %{http_code}' localhost:3000/booking/guests/2/luggage/3
 {
