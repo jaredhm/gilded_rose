@@ -67,6 +67,55 @@ curl -XGET -w '\nCode: %{http_code}' localhost:3000/booking/guests/2/luggage/4
 Code: 404
 ```
 
+### Making a booking:
+When the client wishes to make a booking for a set of luggage and guest constraints, do
+```
+POST /booking/guests/:numGuest/luggage/:storageNeeded
+```
+Again, where both `numGuests` and `storageNeeded` are integers. An example query:
+```
+curl -XPOST -w '\nCode: %{http_code}' localhost:3000/booking/guests/2/luggage/3
+{
+   "error" : "",
+   "booking" : {
+      "rooms" : {
+         "Foo" : {
+            "beds" : [
+               {
+                  "name" : "A",
+                  "guest" : {
+                     "luggage" : 1
+                  },
+                  "openLuggageSlots" : 0
+               }
+            ]
+         },
+         "Baz" : {
+            "beds" : [
+               {
+                  "name" : "A",
+                  "openLuggageSlots" : 0,
+                  "guest" : {
+                     "luggage" : 2
+                  }
+               }
+            ]
+         }
+      },
+      "gold" : 21
+   }
+}
+Code: 200
+```
+When the booking can't be satisfied, the API will respond as followings:
+```
+curl -XPOST -w '\nCode: %{http_code}' localhost:3000/booking/guests/2/luggage/4
+{
+   "error" : "Could not accomodate booking"
+}
+Code: 404
+```
+
 # Third party tools/frameworks used
 I kept dependencies to a minimum, I think. All that's needed is:
  - express - provides a nice, easy way to create a node API fast
