@@ -151,7 +151,14 @@ curl -XGET -w '\nCode:%{http_code}' localhost:3000/schedule
 Code: 200
 ```
 
-# Time Spent
+# Extending the application
+Adding more rooms would be trivial, I think. The algorithms here are general enough that you'd only ever run into trouble extending the size of the inn when the complexity of the booking function catches up.
+
+Adding more business logic constraints would probably be a bit of a lift. Currently, the code is laid out pretty well, but the logic is baked into the model and the booking libraries. I've not implemented any framework supporting arbitrary booking constraints; number of guests and storage space are the only factors which the API attempts to statisfy.
+
+As for adding more gnomes to the cleaning crew, sadly I was not able to satisfy this constraint, so I don't know if I can really say how the application would've handled such a configuration. Had that portion been implemented, I would've liked to see optimazation of cleaning slots via maybe a sliding window algorithm.
+
+# Time spent and future changes
 I'd estimate that I've spent 8 to 10 hours altogether on this project so far.
 
 Had I more time, there are several things that I'd like to see finished:
@@ -161,6 +168,7 @@ Had I more time, there are several things that I'd like to see finished:
 
    - Had I the time, I would first implement the API using [swagger](https://swagger.io/docs/specification/about/) so that I could properly specify the inputs and outputs of the API schema and use it to generate documentation, skeleton code, and API-level test templates.
    - Additionally, like to see something like [JSDoc](http://usejsdoc.org/) used for all function headers. This would allow me to generate documentation in all sorts of pretty formats.
+  - I think I mentioned this somewhere in the code, but allowing for start-time configuration of the inn would be much more sustainable. Currently everything is hard-coded in the Inn object's constructor. I figured as long as this application didn't use a DB, though, that was something that could be left on the cutting room floor.
   - Automated tests. There's a section about this below. I just think testing is super important, and I didn't get to do it.
 
 # Testing
