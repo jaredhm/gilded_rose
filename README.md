@@ -1,11 +1,11 @@
 # gilded_rose
 
 # Setup
-### System Requirements:
+### System Requirements
  - nodejs is installed (I said >=8.0 because that's what I've developed on, though I'm sure an earlier version will cut it
  - Probably any OS with a terminal and POSIX-compliant shell
 
-### Startup:
+### Startup
 Setup should be as easy as:
 ```
 git clone https://github.com/jaredhm/gilded_rose.git && cd gilded_rose
@@ -17,8 +17,8 @@ This ought to install all the required dependencies locally and then run the app
 Booking app listening on port 3000!
 ```
 
-# Using the API:
-### Querying for a booking:
+# Using the API
+### Querying for a booking
 To query for a room assignment which will satisfy guest and luggage constraints, do
 ```
  GET /booking/guests/:numGuest/luggage/:storageNeeded
@@ -67,7 +67,7 @@ curl -XGET -w '\nCode: %{http_code}' localhost:3000/booking/guests/2/luggage/4
 Code: 404
 ```
 
-### Making a booking:
+### Making a booking
 When the client wishes to make a booking for a set of luggage and guest constraints, do
 ```
 POST /booking/guests/:numGuest/luggage/:storageNeeded
@@ -151,13 +151,16 @@ curl -XGET -w '\nCode:%{http_code}' localhost:3000/schedule
 Code: 200
 ```
 
-# Testing:
+# Testing
 Generally, this isn't something that I allow to slip as a developer, but due to time constraints automated testing got cut.
+
 In the future, I would implement unit and integration tests (probably using something like [mocha](https://mochajs.org/)) in order to test that functional interfaces do not change (without appropriate updates to the tests and dependent code), and that various objects continue to talk to each other in expected ways.
+
 Additionally, using a library like [supertest](https://github.com/visionmedia/supertest) or a tool like [postman](https://www.getpostman.com/docs/postman/scripts/test_scripts), I'd want to see API-level E2E tests implemented to ensure that application-level interfaces stay correct and backwards-compatible.
+
 If I were really feeling ambitious, I'd also encourage consumers of the API to implement consumer-based contract tests with (pact)[https://docs.pact.io/]
 
-# Online resources used:
+# Online resources used
  - [The moment docs](http://momentjs.com/docs) - For interracting with the moment APIs
  - [The express docs](https://expressjs.com/en/4x/api.html) - For standing up routes, and interracting with request/response objects
  - [The priorityqueuejs docs](https://www.npmjs.com/package/priorityqueuejs) - For using the implementation of the priority queue library I used
@@ -165,7 +168,7 @@ If I were really feeling ambitious, I'd also encourage consumers of the API to i
  - StackOverflow, to troubleshoot a medley of problems. Documenting them all here would be overkill, as much of the documentation for various idioms used is embedded within the code
  - The project spec, of course
 
-# Third party tools/frameworks used:
+# Third party tools/frameworks used
 I kept dependencies to a minimum, I think. All that's needed is:
  - express - provides a nice, easy way to create a node API fast
 
