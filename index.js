@@ -12,7 +12,7 @@ const inn = new Inn(); // Create the initial inn object
  * accomodate the specified number of guests, pieces of luggage, whether
  * or not the room is clean
  */
-app.get('/book/guests/:numGuests/luggage/:luggageCount', function (req, res) {
+app.get('/booking/guests/:numGuests/luggage/:luggageCount', function (req, res) {
   // Get the available rooms based on constraints
   const booking = bookingLib.getAccomodations(
     req.params.numGuests,
@@ -25,9 +25,32 @@ app.get('/book/guests/:numGuests/luggage/:luggageCount', function (req, res) {
       error: 'Could not accomodate booking'
     });
   } else {
-    booking.error = '';
     res.status(200).json({
-      booking: booking
+      booking: booking,
+      error: ''
+    });
+  }
+})
+
+/*
+ * Second Endpoint: book the rooms
+ */
+app.post('/booking/guests/:numGuests/luggage/:luggageCount', function (req, res) {
+  // Get the available rooms based on constraints
+  const booking = bookingLib.getAccomodations(
+    req.params.numGuests,
+    req.params.luggageCount,
+    inn,
+    true
+  );
+  if(booking === undefined) {
+    res.status(404).json({
+      error: 'Could not accomodate booking'
+    });
+  } else {
+    res.status(200).json({
+      booking: booking,
+      error: ''
     });
   }
 })
