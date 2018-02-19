@@ -151,6 +151,17 @@ curl -XGET -w '\nCode:%{http_code}' localhost:3000/schedule
 Code: 200
 ```
 
+# Time Spent
+I'd estimate that I've spent 8 to 10 hours altogether on this project so far.
+
+Had I more time, there are several things that I'd like to see finished:
+ - Scheduling and cleaning functionality actually implemented. Unfortunately, due to time constraints, I didn't get around to meeting this requirement
+ - Better documentation. This would mean a number of things.
+
+Had I the time, I would first implement the API using (swagger)[https://swagger.io/docs/specification/about/] so that I could properly specify the inputs and outputs of the API schema and use it to generate documentation, skeleton code, and API-level test templates.
+Additionally, like to see something like (JSDoc)[http://usejsdoc.org/] used for all function headers. This would allow me to generate documentation in all sorts of pretty formats.
+  - Automated tests. There's a section about this below. I just think testing is super important, and I didn't get to do it.
+
 # Testing
 Generally, this isn't something that I allow to slip as a developer, but due to time constraints automated testing got cut.
 
@@ -158,7 +169,7 @@ In the future, I would implement unit and integration tests (probably using some
 
 Additionally, using a library like [supertest](https://github.com/visionmedia/supertest) or a tool like [postman](https://www.getpostman.com/docs/postman/scripts/test_scripts), I'd want to see API-level E2E tests implemented to ensure that application-level interfaces stay correct and backwards-compatible.
 
-If I were really feeling ambitious, I'd also encourage consumers of the API to implement consumer-based contract tests with (pact)[https://docs.pact.io/]
+If I were really feeling ambitious, I'd also encourage consumers of the API to implement consumer-based contract tests with [pact](https://docs.pact.io/).
 
 # Online resources used
  - [The moment docs](http://momentjs.com/docs) - For interracting with the moment APIs
