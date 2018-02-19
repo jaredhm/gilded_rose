@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 
-const Inn = require('./lib/inn');
+const Inn = require('./lib/model/inn');
 const bookingLib = require('./lib/booking');
 
 const inn = new Inn(); // Create the initial inn object
