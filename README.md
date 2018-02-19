@@ -115,6 +115,41 @@ curl -XPOST -w '\nCode: %{http_code}' localhost:3000/booking/guests/2/luggage/4
 }
 Code: 404
 ```
+### Querying for current Bookings:
+The API may be queried for schedule of currently-occupied beds. Do this with
+```
+GET /schedule
+```
+An example query would be:
+```
+curl -XGET -w '\nCode:%{http_code}' localhost:3000/schedule
+{
+   "schedule" : [
+      {
+         "checkout" : "2018-02-20T08:00:00-05:00",
+         "bed" : {
+            "name" : "A",
+            "guest" : {
+               "luggage" : 1
+            },
+            "openLuggageSlots" : 0
+         }
+      },
+      {
+         "checkout" : "2018-02-20T08:00:00-05:00",
+         "bed" : {
+            "openLuggageSlots" : 0,
+            "name" : "A",
+            "guest" : {
+               "luggage" : 2
+            }
+         }
+      }
+   ],
+   "error" : ""
+}
+Code: 200
+```
 
 # Third party tools/frameworks used
 I kept dependencies to a minimum, I think. All that's needed is:
