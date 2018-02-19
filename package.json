@@ -1,5 +1,8 @@
 {
   "name": "gilded_rose",
+  "engines": {
+    "node": ">=8.0"
+  },
   "version": "1.0.0",
   "description": "A booking api",
   "main": "index.js",
@@ -20,7 +23,6 @@
   "dependencies": {
     "express": "^4.16.2",
     "moment": "^2.20.1",
-    "priorityqueuejs": "^1.0.0",
-    "underscore": "^1.8.3"
+    "priorityqueuejs": "^1.0.0"
   }
 }
