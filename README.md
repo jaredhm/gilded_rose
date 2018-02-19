@@ -157,6 +157,8 @@ I kept dependencies to a minimum, I think. All that's needed is:
 
    Chosen because I've used it before, and because of how quickly and easily you can stand up routes, and because of the request/response APIs it provides. The documentation is also pretty nice.
  - moment - really convenient set of functionality for working with dates and times
+
    This one I'd never heard of before today. But one look at the docs and I was sold; this library is neat and tidy and really powerful. Not to mention it introduces zero extra deps into your project
  - priorityqueuejs - implementation of a priority queue giving you callback-driven sorting. Used for optimal (I think) booking algorithm
+
    Again, I'd never used this. To be perfectly honest, I googled 'nodejs priority queue' and chose one which seemed to be used pretty well by the community. Really just didn't want to crack the algorithms book and reinvent the wheel.
