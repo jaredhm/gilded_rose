@@ -151,6 +151,12 @@ curl -XGET -w '\nCode:%{http_code}' localhost:3000/schedule
 Code: 200
 ```
 
+# Testing:
+Generally, this isn't something that I allow to slip as a developer, but due to time constraints automated testing got cut.
+In the future, I would implement unit and integration tests (probably using something like [mocha](https://mochajs.org/)) in order to test that functional interfaces do not change (without appropriate updates to the tests and dependent code), and that various objects continue to talk to each other in expected ways.
+Additionally, using a library like [supertest](https://github.com/visionmedia/supertest) or a tool like [postman](https://www.getpostman.com/docs/postman/scripts/test_scripts), I'd want to see API-level E2E tests implemented to ensure that application-level interfaces stay correct and backwards-compatible.
+If I were really feeling ambitious, I'd also encourage consumers of the API to implement consumer-based contract tests with (pact)[https://docs.pact.io/]
+
 # Online resources used:
  - [The moment docs](http://momentjs.com/docs) - For interracting with the moment APIs
  - [The express docs](https://expressjs.com/en/4x/api.html) - For standing up routes, and interracting with request/response objects
