@@ -1,7 +1,7 @@
 # gilded_rose
 
 # Setup
-###System Requirements:
+### System Requirements:
  - nodejs is installed (I said >=8.0 because that's what I've developed on, though I'm sure an earlier version will cut it
  - Probably any OS with a terminal and POSIX-compliant shell
 
